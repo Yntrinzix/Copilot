@@ -1,0 +1,22 @@
+# Runtime state (per-user, not shared)
+signal.json
+session-state.json
+workflow-state.json
+guide-proposals.json
+
+# Knowledge is per-user (except shared/)
+knowledge/sessions/*
+knowledge/projects/*
+knowledge/workflow/*
+!knowledge/shared/
+!knowledge/sessions/.gitkeep
+!knowledge/projects/.gitkeep
+!knowledge/workflow/.gitkeep
+
+# MCP server build artifacts
+mcp-servers/*/dist/
+mcp-servers/*/node_modules/
+
+# OS
+.DS_Store
+Thumbs.db

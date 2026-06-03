@@ -1,0 +1,23 @@
+{
+  "kiro-brain": {
+    "command": "node",
+    "args": ["mcp-servers/kiro-brain/dist/index.js"],
+    "cwd": "~/.copilot",
+    "env": {
+      "COPILOT_ROOT": "~/.copilot"
+    }
+  },
+  "github": {
+    "command": "copilot-mcp-github",
+    "note": "Pre-installed with Copilot CLI. Provides: issues, PRs, code search, repo operations, code review."
+  },
+  "azure-devops": {
+    "command": "npx",
+    "args": ["-y", "@anthropic/azure-devops-mcp-server"],
+    "env": {
+      "AZURE_DEVOPS_ORG_URL": "https://dev.azure.com/YOUR_ORG",
+      "AZURE_DEVOPS_PAT": "YOUR_PAT_HERE"
+    },
+    "note": "Work items, boards, PRs, repos, pipelines. Set your org URL and PAT."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "hooks": {
+    "preToolUse": [
+      {
+        "event": "preToolUse",
+        "tools": ["shell"],
+        "script": "if ($env:TOOL_INPUT -match 'push\\s+--force|reset\\s+--hard|clean\\s+-f|branch\\s+-D') { Write-Output 'BLOCK: Destructive git operation requires explicit user confirmation.'; exit 1 }"
+      },
+      {
+        "event": "preToolUse",
+        "tools": ["edit", "create", "delete"],
+        "script": "if ($env:FILE_PATH -match 'node_modules[\\\\/]') { Write-Output 'BLOCK: Cannot modify node_modules.'; exit 1 }"
+      },
+      {
+        "event": "preToolUse",
+        "tools": ["edit", "delete"],
+        "script": "if ($env:FILE_PATH -match '^\\.env') { Write-Output 'BLOCK: Direct .env modification blocked. Use environment variables or ask user.'; exit 1 }"
+      }
+    ],
+    "postToolUse": []
+  }
+}
