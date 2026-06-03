@@ -38,7 +38,7 @@ copilot
 
 To find yours, run `echo $HOME` (macOS/Linux) or `echo %USERPROFILE%` (Windows).
 
-**If you skip step 2**, the kiro-brain MCP tools (knowledge, sessions, workflows) won't be available. Agents and skills still work, but you lose persistent memory.
+**If you skip step 2**, the brain MCP tools (knowledge, sessions, workflows) won't be available. Agents and skills still work, but you lose persistent memory.
 
 ## Structure
 
