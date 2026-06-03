@@ -39,7 +39,7 @@ function indexKnowledge() {
 
 indexKnowledge();
 
-const server = new Server({ name: "kiro-brain", version: "1.0.0" }, { capabilities: { tools: {} } });
+const server = new Server({ name: "brain", version: "1.0.0" }, { capabilities: { tools: {} } });
 
 server.setRequestHandler(ListToolsRequestSchema, async () => ({
   tools: [

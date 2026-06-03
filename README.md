@@ -11,7 +11,7 @@ Multi-agent orchestration harness for GitHub Copilot CLI. Self-contained - no ex
 git clone https://github.com/Yntrinzix/Copilot.git ~/.copilot
 
 # 2. Build the MCP server (required - won't work without this)
-cd ~/.copilot/mcp-servers/kiro-brain
+cd ~/.copilot/mcp-servers/brain
 npm install
 npm run build
 
@@ -72,7 +72,7 @@ To find yours, run `echo $HOME` (macOS/Linux) or `echo %USERPROFILE%` (Windows).
 │   ├── sessions/
 │   ├── projects/
 │   └── workflow/
-└── mcp-servers/kiro-brain/  <- MCP server (knowledge, workflow, signals)
+└── mcp-servers/brain/       <- MCP server (knowledge, workflow, signals)
 ```
 
 ## How It Works

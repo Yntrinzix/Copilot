@@ -56,7 +56,7 @@ You have specialized agents available. Invoke with @mention:
 - Run biome check on changed files before committing
 - No dead code, no placeholders, no TODO-only files
 
-## MCP Tools (kiro-brain)
+## MCP Tools (brain)
 
 These tools are your persistent memory. Use them proactively, not just when asked.
 

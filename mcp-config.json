@@ -1,7 +1,7 @@
 {
-  "kiro-brain": {
+  "brain": {
     "command": "node",
-    "args": ["mcp-servers/kiro-brain/dist/index.js"],
+    "args": ["mcp-servers/brain/dist/index.js"],
     "cwd": "~/.copilot",
     "env": {
       "COPILOT_ROOT": "~/.copilot"
