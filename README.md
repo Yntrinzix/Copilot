@@ -4,28 +4,36 @@ Multi-agent orchestration harness for GitHub Copilot CLI. Self-contained - no ex
 
 ## Setup
 
-**Prerequisites:** Node.js 18+ installed.
+**Prerequisites:** Node.js 18+ and GitHub Copilot CLI installed.
 
 ```bash
-# 1. Build the MCP server (required - won't work without this)
+# 1. Clone this repo to your home directory as ~/.copilot
+git clone https://github.com/Yntrinzix/Copilot.git ~/.copilot
+
+# 2. Build the MCP server (required - won't work without this)
 cd ~/.copilot/mcp-servers/kiro-brain
 npm install
 npm run build
 
-# 2. Configure Azure DevOps (optional - only if your team uses ADO)
+# 3. Configure Azure DevOps (optional - only if your team uses ADO)
 # Edit ~/.copilot/mcp-config.json and set:
 #   AZURE_DEVOPS_ORG_URL → your org URL
 #   AZURE_DEVOPS_PAT → your personal access token
 
-# 3. Start Copilot CLI
+# 4. Start Copilot CLI (from any project directory)
 copilot
 
-# 4. Verify everything loaded
+# 5. Verify everything loaded
 /agent
 # Should list: architect, dark-architect, frontend, backend, etc.
 ```
 
-**If you skip step 1**, the kiro-brain MCP tools (knowledge, sessions, workflows) won't be available. Agents and skills still work, but you lose persistent memory.
+**Important:** The folder MUST be `~/.copilot` (your home directory). This is where Copilot CLI looks for global agents, skills, hooks, and MCP config.
+
+- **Windows:** `C:\Users\YourUsername\.copilot`
+- **macOS/Linux:** `~/.copilot`
+
+**If you skip step 2**, the kiro-brain MCP tools (knowledge, sessions, workflows) won't be available. Agents and skills still work, but you lose persistent memory.
 
 ## Structure
 
