@@ -28,10 +28,15 @@ copilot
 # Should list: architect, dark-architect, frontend, backend, etc.
 ```
 
-**Important:** The folder MUST be `~/.copilot` (your home directory). This is where Copilot CLI looks for global agents, skills, hooks, and MCP config.
+**Important:** The folder MUST be named `.copilot` inside your user home directory. This is where Copilot CLI looks for global agents, skills, hooks, and MCP config.
 
-- **Windows:** `C:\Users\YourUsername\.copilot`
-- **macOS/Linux:** `~/.copilot`
+| OS | Home Directory | Full Path |
+|----|----------------|-----------|
+| Windows | `C:\Users\YourUsername\` | `C:\Users\YourUsername\.copilot` |
+| macOS | `/Users/YourUsername/` | `/Users/YourUsername/.copilot` |
+| Linux | `/home/YourUsername/` | `/home/YourUsername/.copilot` |
+
+To find yours, run `echo $HOME` (macOS/Linux) or `echo %USERPROFILE%` (Windows).
 
 **If you skip step 2**, the kiro-brain MCP tools (knowledge, sessions, workflows) won't be available. Agents and skills still work, but you lose persistent memory.
 
